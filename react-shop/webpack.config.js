@@ -7,6 +7,7 @@ module.exports = {
     output: { // Indica donde se va a guardar el proyecto compilado
         path: path.resolve(__dirname, 'dist'), //Puede ser build o dist
         filename: 'bundle.js',  // Nombre del archivo final (empaquetado)
+        publicPath: '/'
     },
     mode: 'development',  //Modo de desarrollo
     resolve: {
@@ -30,13 +31,20 @@ module.exports = {
                 ]
             },
             {
-                test: /\.s[ac]ss$/i, //Extensiones que vamos a utilizar
+                test: /\.(css|scss)$/i, //Extensiones que vamos a utilizar
                 use: [
                     "style-loader",
                     "css-loader",
                     "sass-loader",
                 ],
-            }
+            },
+            {
+                test: /\.(png|jpg|svg|jpeg|webp)$/, /*aquí en test agregas la expresión regular para procesar los diferentes tipos de imagenes que tengas.*/
+                type: 'asset/resource',
+                generator: {
+                   filename: 'assets/pictures/[hash][ext]', /*aquí en filename pones la carpeta en donde quieres que se guarden tus imagenes (le agrego el [hash] para evitar problemas con el cache, además [ext] hace referencia a la extensión del archivo que se haya procesado).*/
+                }
+             }
         ]
     },
     plugins : [
@@ -54,5 +62,6 @@ module.exports = {
         },
         compress: true,
         port: 3005, //Puerto de desarrollo
+        historyApiFallback: true,
     }
 }
