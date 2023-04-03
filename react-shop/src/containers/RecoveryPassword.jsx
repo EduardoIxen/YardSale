@@ -1,7 +1,7 @@
 import React from 'react' //imr
 import '../styles/RecoveryPassword.scss'
-import logo from '../../public/logos/logo_yard_sale.svg'
-import imgEmail from '../../public/icons/email.svg'
+import logo from '@logos/logo_yard_sale.svg'
+import imgEmail from '@icons/email.svg'
 
 
 const RecoveryPassword = () => { //slr
