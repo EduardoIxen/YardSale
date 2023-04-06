@@ -3,5 +3,8 @@
     "presets": [
         "@babel/preset-env", //Para que babel pueda leer los archivos de javascript
         "@babel/preset-react" //Para que babel pueda leer los archivos de react
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime"
     ]
 }
