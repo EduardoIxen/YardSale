@@ -1,0 +1,10 @@
+//Se agrega la configuarrion de babel para que pueda leer los archivos jsx
+{
+    "presets": [
+        "@babel/preset-env", //Para que babel pueda leer los archivos de javascript
+        "@babel/preset-react" //Para que babel pueda leer los archivos de react
+    ],
+    "plugins": [
+        "@babel/plugin-transform-runtime"
+    ]
+}
