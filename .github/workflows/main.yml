@@ -18,7 +18,8 @@ jobs:                   #tareas que se ejecutarán
           npm install
           npm run build
 
-      - name: Deploy 🚀
+      - name: Deploy to GitHub Pages 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: build # The folder the action should deploy.
+          branch: gh-pages
+          folder: react-shop/build
