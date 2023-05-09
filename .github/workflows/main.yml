@@ -22,4 +22,4 @@ jobs:                   #tareas que se ejecutarán
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
         with:
-          folder: react-shop/build # The folder the action should deploy.
+          folder: /home/runner/work/YardSale/YardSale/react-shop/build # The folder the action should deploy.
