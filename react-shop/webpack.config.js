@@ -7,7 +7,7 @@ module.exports = {
     output: { // Indica donde se va a guardar el proyecto compilado
         path: path.resolve(__dirname, 'dist'), //Puede ser build o dist
         filename: 'bundle.js',  // Nombre del archivo final (empaquetado)
-        publicPath: '/'
+        publicPath: '/YardSale/'
     },
     mode: 'development',  //Modo de desarrollo
     resolve: {
