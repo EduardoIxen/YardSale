@@ -1,3 +1,6 @@
+defaults:
+  path:
+    workflows: ./.github/workflows
 name: Build and Deploy #nombre
 on: [push]              #cada vez que se haga un push a nuestro repositorio
 permissions:
