@@ -17,10 +17,7 @@ jobs:                   #tareas que se ejecutarán
           npm run build
 
       - name: List files in directory
-        run: /
-          ls -a
-          pwd
-          ls react-shop
+        run: ls -a; pwd; ls react-shop
 
       - name: Deploy 🚀
         uses: JamesIves/github-pages-deploy-action@v4
